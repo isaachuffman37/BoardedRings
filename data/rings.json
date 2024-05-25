@@ -1,0 +1,158 @@
+{
+    "rings": [
+        {
+            "id": "weDji238",
+            "colors": ["red", "green", "yellow"],
+            "imgSrc": "",
+            "imgAlt": "",
+            "quantitySold": 0,
+            "description" : "",
+            "sizes": ["7", "8", "9", "10", "11", "12"],
+            "width": "6mm",
+            "price" : 23.99
+        },
+        {
+            "id": "aBkLq092",
+            "colors": ["blue", "green", "purple"],
+            "imgSrc": "",
+            "imgAlt": "",
+            "quantitySold": 5,
+            "description" : "",
+            "sizes": ["6", "7", "8", "9", "10"],
+            "width": "5mm",
+            "price" : 19.99
+        },
+        {
+            "id": "zRtHy735",
+            "colors": ["black", "white"],
+            "imgSrc": "",
+            "imgAlt": "",
+            "quantitySold": 10,
+            "description" : "",
+            "sizes": ["8", "9", "10", "11"],
+            "width": "7mm",
+            "price" : 25.99
+        },
+        {
+            "id": "jUvDi123",
+            "colors": ["gold", "silver"],
+            "imgSrc": "",
+            "imgAlt": "",
+            "quantitySold": 15,
+            "description" : "",
+            "sizes": ["5", "6", "7", "8"],
+            "width": "4mm",
+            "price" : 30.99
+        },
+        {
+            "id": "qMzXu857",
+            "colors": ["orange", "purple"],
+            "imgSrc": "",
+            "imgAlt": "",
+            "quantitySold": 8,
+            "description" : "",
+            "sizes": ["6", "7", "8", "9", "10", "11"],
+            "width": "5mm",
+            "price" : 22.99
+        },
+        {
+            "id": "pRxTy456",
+            "colors": ["red", "black"],
+            "imgSrc": "",
+            "imgAlt": "",
+            "quantitySold": 3,
+            "description" : "",
+            "sizes": ["7", "8", "9"],
+            "width": "6mm",
+            "price" : 27.99
+        },
+        {
+            "id": "nTqBp123",
+            "colors": ["blue", "silver"],
+            "imgSrc": "",
+            "imgAlt": "",
+            "quantitySold": 12,
+            "description" : "",
+            "sizes": ["8", "9", "10", "11", "12"],
+            "width": "8mm",
+            "price" : 29.99
+        },
+        {
+            "id": "yKxLm678",
+            "colors": ["green", "yellow"],
+            "imgSrc": "",
+            "imgAlt": "",
+            "quantitySold": 7,
+            "description" : "",
+            "sizes": ["6", "7", "8"],
+            "width": "6mm",
+            "price" : 21.99
+        },
+        {
+            "id": "dEzJp324",
+            "colors": ["black", "gold"],
+            "imgSrc": "",
+            "imgAlt": "",
+            "quantitySold": 20,
+            "description" : "",
+            "sizes": ["9", "10", "11", "12"],
+            "width": "7mm",
+            "price" : 31.99
+        },
+        {
+            "id": "cLvHq890",
+            "colors": ["white", "red"],
+            "imgSrc": "",
+            "imgAlt": "",
+            "quantitySold": 6,
+            "description" : "",
+            "sizes": ["5", "6", "7"],
+            "width": "5mm",
+            "price" : 24.99
+        },
+        {
+            "id": "gRtMl345",
+            "colors": ["purple", "orange"],
+            "imgSrc": "",
+            "imgAlt": "",
+            "quantitySold": 9,
+            "description" : "",
+            "sizes": ["8", "9", "10", "11"],
+            "width": "4mm",
+            "price" : 28.99
+        },
+        {
+            "id": "uWpNt567",
+            "colors": ["blue", "green", "tan"],
+            "imgSrc": "",
+            "imgAlt": "",
+            "quantitySold": 2,
+            "description" : "",
+            "sizes": ["7", "8", "9", "10"],
+            "width": "6mm",
+            "price" : 20.99
+        },
+        {
+            "id": "eWqLx123",
+            "colors": ["yellow", "black"],
+            "imgSrc": "",
+            "imgAlt": "",
+            "quantitySold": 11,
+            "description" : "",
+            "sizes": ["6", "7", "8", "9", "10", "11"],
+            "width": "7mm",
+            "price" : 26.99
+        },
+        {
+            "id": "tQmZl987",
+            "colors": ["red", "silver", "blue"],
+            "imgSrc": "",
+            "imgAlt": "",
+            "quantitySold": 4,
+            "description" : "",
+            "sizes": ["5", "6", "7", "8", "9"],
+            "width": "5mm",
+            "price" : 22.99
+        }
+    ]
+}
