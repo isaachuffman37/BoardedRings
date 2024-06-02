@@ -1,6 +1,11 @@
 export class LocalData {
-    constructor(filename){
-        this. path = `./json/${filename}`
+    constructor(filename, pageName = ""){
+        if(pageName == "home"){
+            this.path = `./json/${filename}`  
+        } else {
+            this.path = `../json/${filename}`
+        }
+        
     }
 
     async getData() {
