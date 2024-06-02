@@ -1,6 +1,6 @@
 export class LocalData {
     constructor(filename){
-        this. path = `../json/${filename}`
+        this. path = `./json/${filename}`
     }
 
     async getData() {
