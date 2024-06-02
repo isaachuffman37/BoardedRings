@@ -103,14 +103,14 @@ export function setLocalStorage(key, data) {
     localStorage.setItem(key, JSON.stringify(data));
 }
 
-export function renderHeaderAndFooter() {
+export function renderHeaderAndFooter(pageName = "") {
     let headerElement = document.querySelector(".dynamic-header");
     let footerElement = document.querySelector(".dynamic-footer");
-    headerElement.innerHTML = headerContent();
-    footerElement.innerHTML = footerContent();
+    headerElement.innerHTML = headerContent(pageName);
+    footerElement.innerHTML = footerContent(pageName);
 }
 
-function headerContent(pageName = "") {
+function headerContent(pageName) {
     let imgSrc = ""
     if(pageName == "home"){
         imgSrc = "./images/shopping-cart.png"
