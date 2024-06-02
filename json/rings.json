@@ -3,10 +3,10 @@
         {
             "id": "weDji238",
             "colors": ["red", "green", "yellow"],
-            "imgSrc": "",
-            "imgAlt": "",
-            "quantitySold": 0,
-            "description" : "",
+            "imgSrc": "ring.jpg",
+            "imgAlt": "ring",
+            "quantitySold": 30,
+            "description" : "I need to come up with stuff",
             "sizes": ["7", "8", "9", "10", "11", "12"],
             "width": "6mm",
             "price" : 23.99
