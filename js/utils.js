@@ -11,8 +11,9 @@ function makeColorString(ring){
     return ringColors;
 }
 
-export function createStringLiteralForRingCards(ring){
-    return `
+export function createStringLiteralForRingCards(ring, pageName = ""){
+    if (pageName != "home"){
+        return `
         <img 
             src = "../images/${ring.imgSrc}"
             alt = "${ring.imgAlt}"
@@ -20,8 +21,20 @@ export function createStringLiteralForRingCards(ring){
 
         <p> ${makeColorString(ring)} </p>
         <p> ${ring.description}  </p> 
-        <p> Price: $${ring.price}  </p> 
-    `
+        <p> Price: $${ring.price} </p> 
+        `
+    }
+    return `
+        <img 
+            src = "./images/${ring.imgSrc}"
+            alt = "${ring.imgAlt}"
+        />
+
+        <p> ${makeColorString(ring)} </p>
+        <p> ${ring.description}  </p> 
+        <p> Price: $${ring.price} </p> 
+        `
+    
 }
 
 export function createStringLiteralForCartRings(ring){
@@ -59,10 +72,10 @@ export function getTopThreeRings(ringList){
     return topThreeRings;
 }
 
-export function renderRingWithTemplate(ringTemplateFn, parentElement, ringList, position = "afterbegin", clear = false){
+export function renderRingWithTemplate(pageName = "", ringTemplateFn, parentElement, ringList, position = "afterbegin", clear = false){
     if(clear === true) parentElement.innerHtml = "";
     ringList.map((ring)=> {
-        const ringCard = ringTemplateFn(ring);
+        const ringCard = ringTemplateFn(ring, pageName);
         parentElement.insertAdjacentHTML(position, ringCard);
     })
 }
@@ -97,14 +110,20 @@ export function renderHeaderAndFooter() {
     footerElement.innerHTML = footerContent();
 }
 
-function headerContent() {
+function headerContent(pageName = "") {
+    let imgSrc = ""
+    if(pageName == "home"){
+        imgSrc = "./images/shopping-cart.png"
+    } else {
+        imgSrc = "../images/shopping-cart.png"
+    }
     return `
     <div class = "header-container"> 
         <img src = "../images/logo.jpeg" alt = "comapny logo"></img>
         <a href = "../rings/index.html" ><p>Our Rings</p></a>
         <a href = "#" ><p>Contact Us</p></a>
     </div>
-    <img src = "" alt = "cart icon"> </img>
+    <img src = ${imgSrc} alt = "cart icon"> </img>
     `
 }
 

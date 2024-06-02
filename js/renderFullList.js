@@ -25,5 +25,5 @@ selectElement.addEventListener('change', function() {
 
 })
 
-renderRingWithTemplate(createStringLiteralForRingCards, topRingsElement, sortedMostPopular);
+renderRingWithTemplate("",createStringLiteralForRingCards, topRingsElement, sortedMostPopular);
 
