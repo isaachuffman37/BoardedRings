@@ -111,19 +111,22 @@ export function renderHeaderAndFooter(pageName = "") {
 }
 
 function headerContent(pageName) {
-    let imgSrc = ""
+    let iconImgSrc = "";
+    let logoImgSrc = "";
     if(pageName == "home"){
-        imgSrc = "./images/shopping-cart.png"
+        iconImgSrc = "./images/shopping-cart.png"
+        logoImgSrc = "./images/logo.jpeg"
     } else {
-        imgSrc = "../images/shopping-cart.png"
+        iconImgSrc = "../images/shopping-cart.png"
+        logoImgSrc = "../images/logo.jpeg"
     }
     return `
     <div class = "header-container"> 
-        <img src = "../images/logo.jpeg" alt = "comapny logo"></img>
+        <img src = ${logoImgSrc} alt = "comapny logo"></img>
         <a href = "../rings/index.html" ><p>Our Rings</p></a>
         <a href = "#" ><p>Contact Us</p></a>
     </div>
-    <img src = ${imgSrc} alt = "cart icon"> </img>
+    <img src = ${iconImgSrc} alt = "cart icon"> </img>
     `
 }
 
