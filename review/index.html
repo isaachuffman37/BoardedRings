@@ -11,6 +11,15 @@
     </header>
     <main class="rings-main">
         <h2>Write A Review!</h2>
+        <form action="/submit_comment" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+    
+            <label for="comment">Comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
+    
+            <button type="submit">Submit Comment</button>
+        </form>
         
     </main>
     <footer class="dynamic-footer">

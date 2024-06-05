@@ -28,7 +28,7 @@ export class UserCart {
         if (this.rings == null || this.rings == []){
             this.empty();
         } else{
-            renderRingWithTemplate(createStringLiteralForCartRings, this.parentElement, this.rings);
+            renderRingWithTemplate("",createStringLiteralForCartRings, this.parentElement, this.rings);
         }   
     }
 }
