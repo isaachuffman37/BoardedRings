@@ -1,4 +1,4 @@
-function makeColorString(ring){
+export function makeColorString(ring){
     let ringColors = "";
     ring.colors.forEach((element, index) => {
         if(index != ring.colors.length - 1) {
@@ -22,17 +22,21 @@ export function createStringLiteralForRingCards(ring, pageName = ""){
         <p> ${makeColorString(ring)} </p>
         <p> ${ring.description}  </p> 
         <p> Price: $${ring.price} </p> 
+        <button class = "add-to-cart" data-id = ${ring.id}>Add to Cart</button><br>
         `
     }
     return `
-        <img 
-            src = "./images/${ring.imgSrc}"
-            alt = "${ring.imgAlt}"
-        />
+        <div class = "ring-card-div">
+            <img 
+                src = "./images/${ring.imgSrc}"
+                alt = "${ring.imgAlt}"
+            />
 
-        <p> ${makeColorString(ring)} </p>
-        <p> ${ring.description}  </p> 
-        <p> Price: $${ring.price} </p> 
+            <p> ${makeColorString(ring)} </p>
+            <p> ${ring.description}  </p> 
+            <p> Price: $${ring.price} </p> 
+            <button class ="add-to-cart" data-id = ${ring.id}>Add to Cart</button>
+        </div>
         `
     
 }
@@ -73,6 +77,7 @@ export function getTopThreeRings(ringList){
 }
 
 export function renderRingWithTemplate(pageName = "", ringTemplateFn, parentElement, ringList, position = "afterbegin", clear = false){
+    parentElement.innerHTML = "";
     if(clear === true) parentElement.innerHtml = "";
     ringList.map((ring)=> {
         const ringCard = ringTemplateFn(ring, pageName);
@@ -113,20 +118,29 @@ export function renderHeaderAndFooter(pageName = "") {
 function headerContent(pageName) {
     let iconImgSrc = "";
     let logoImgSrc = "";
+    let homeRef = "";
+    let cartRef = "";
+    let ringsRef = "";
     if(pageName == "home"){
-        iconImgSrc = "./images/shopping-cart.png"
-        logoImgSrc = "./images/logo.jpeg"
+        iconImgSrc = "./images/shopping-cart.png";
+        logoImgSrc = "./images/logo.jpeg";
+        homeRef = "./index.html";
+        cartRef = "./cart/index.html"
+        ringsRef = "./rings/index.html"
     } else {
-        iconImgSrc = "../images/shopping-cart.png"
-        logoImgSrc = "../images/logo.jpeg"
+        iconImgSrc = "../images/shopping-cart.png";
+        logoImgSrc = "../images/logo.jpeg";
+        homeRef = "../index.html";
+        cartRef = "../cart/index.html"
+        ringsRef = "../rings/index.html"
     }
     return `
     <div class = "header-container"> 
-        <img src = ${logoImgSrc} alt = "comapny logo"></img>
-        <a href = "../rings/index.html" ><p>Our Rings</p></a>
-        <a href = "#" ><p>Contact Us</p></a>
+        <a href= "${homeRef}"><img src = ${logoImgSrc} alt = "comapny logo"></img>
+        <a href= "${ringsRef}" ><p>Our Rings</p></a>
+        <a href= "#" ><p>Contact Us</p></a>
     </div>
-    <img src = ${iconImgSrc} alt = "cart icon"> </img>
+    <a href= "${cartRef}"><img src = ${iconImgSrc} alt = "cart icon"></img></a>
     `
 }
 
@@ -141,4 +155,21 @@ function footerContent() {
     <div class = "copyright">
     </div>
     `
+}
+
+
+export function addRingToCart(ring) {
+    let userCartList = getLocalStorage("ring-cart");
+    if (userCartList == null) {
+        userCartList = [];
+        userCartList.push(ring);
+    } else {
+        userCartList.push(ring);
+    }
+
+    setLocalStorage("ring-cart", userCartList);
+}
+
+export async function findRingById(id, rings) {
+    return rings.find((item) => item.id === id);
 }
