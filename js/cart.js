@@ -11,8 +11,4 @@ let userCart = new UserCart("ring-cart", cartRingsElement)
 userCart.renderCartRings();
 
 console.log(userCart.rings)
-const thanksButton = document.querySelector(".buy-button");
-thanksButton.addEventListener('click', () => {
-    window.location.href = '../thanks/thanks.html'; // Replace with your desired URL
-});
 
