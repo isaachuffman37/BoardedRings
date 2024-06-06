@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css">
 </head>
 <body>
     <header class="dynamic-header">
@@ -11,15 +12,14 @@
     </header>
     <main class="rings-main">
         <h2>Write A Review!</h2>
-        <form action="/submit_comment" method="post">
+        <form action="">
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" required><br><br>
     
             <label for="comment">Comment:</label><br>
             <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
-    
-            <button type="submit">Submit Comment</button>
         </form>
+        <a href="../thanks/thanks.html"><button>Submit Comment</button></a>
         
     </main>
     <footer class="dynamic-footer">

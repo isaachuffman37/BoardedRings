@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
 </head>
 <body>
     <header class="dynamic-header">
         <h1>This will be replaced by dynamic header</h1>
     </header>
     <main class="home-main">
-        <h2>Top Rings</h2>
+        <section class="weather-container">
+            <h2>For the Skaters: </h2>
+            <h3 class="weather-title"></h3>
+            <div class="main-icon-div">
+            </div>
+            <p id="current-temp"></p>
+        </section>
+        <h2 class="top-rings-title">Top Rings</h2>
         <section class="top-rings">
         </section>
     </main>
@@ -18,5 +26,6 @@
 
     </footer> 
     <script src="./js/renderRingList.js" type="module"></script>  
+    <script src="./js/weather.js"></script>
 </body>
 </html>

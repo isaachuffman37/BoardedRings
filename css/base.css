@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Finger+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+
+@keyframes backgroundBlueTransition {
+    0% {
+      background-color: inherit; /* Use the original background color */
+    }
+    50% {
+      background-color: blue; /* Transition to blue */
+    }
+    100% {
+      background-color: inherit; /* Transition back to the original background color */
+    }
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+h1,
+h2 {
+    font-family: 'Finger Paint', cursive;
+}
+
+
+.section-blue-animation {
+    animation: backgroundBlueTransition 3s linear 2;
+}
+
+@keyframes backgroundRedTransition {
+    0% {
+      background-color: inherit; /* Use the original background color */
+    }
+    50% {
+      background-color: red; /* Transition to blue */
+    }
+    100% {
+      background-color: inherit; /* Transition back to the original background color */
+    }
+}
+
+.section-red-animation {
+    animation: backgroundRedTransition 3s linear 2;
+}
+
+
+header{
+    position: relative;
+    border-bottom: 1px solid;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container p {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.header-container a {
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 12rem;
+    height: 7rem;
+}
+
+.icon-img{
+    width: 1.5rem;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.top-rings-title {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.ring-card-div {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 15rem;
+    height: 100%;
+    background-color: aqua;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ring-card-div img{
+    width: 100%;
+    height: auto;
+}
+
+.ring-card-div p{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.top-rings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding-bottom: 1rem;
+    justify-items: center;
+}
+
+.cart-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding-bottom: 1rem;
+    justify-items: center;
+}
+
+.rings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-bottom: 1rem;
+    justify-items: center;
+}
+
+.rings-title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.cart-title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.ring-receipt-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ring-receipt-container p {
+    text-align: center;
+}
+
+.buy-button {
+    font-size: 16pt;
+}
+
+.total-title {
+    text-align: center;
+}
+
+.weather-title {
+    text-align: center;
+}
+
+.main-icon-div {
+    text-align: center;
+}
+
+#current-temp {
+    text-align: center;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 5px solid;
+
+}
