@@ -183,4 +183,5 @@ export async function findRingById(id, rings) {
 
 export function clearCart() {
     setLocalStorage("ring-cart", []);
+    location.reload();
 }
