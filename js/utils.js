@@ -14,15 +14,17 @@ export function makeColorString(ring){
 export function createStringLiteralForRingCards(ring, pageName = ""){
     if (pageName != "home"){
         return `
-        <img 
-            src = "../images/${ring.imgSrc}"
-            alt = "${ring.imgAlt}"
-        />
+        <div class = "ring-card-div">
+            <img 
+                src = "../images/${ring.imgSrc}"
+                alt = "${ring.imgAlt}"
+            >
 
-        <p> ${makeColorString(ring)} </p>
-        <p> ${ring.description}  </p> 
-        <p> Price: $${ring.price} </p> 
-        <button class = "add-to-cart" data-id = ${ring.id}>Add to Cart</button><br>
+            <p> ${makeColorString(ring)} </p>
+            <p> ${ring.description}  </p> 
+            <p> Price: $${ring.price} </p> 
+            <button class = "add-to-cart" data-id = ${ring.id}>Add to Cart</button><br>
+        </div>
         `
     }
     return `
@@ -30,7 +32,7 @@ export function createStringLiteralForRingCards(ring, pageName = ""){
             <img 
                 src = "./images/${ring.imgSrc}"
                 alt = "${ring.imgAlt}"
-            />
+            >
 
             <p> ${makeColorString(ring)} </p>
             <p> ${ring.description}  </p> 
@@ -42,12 +44,13 @@ export function createStringLiteralForRingCards(ring, pageName = ""){
 }
 
 export function createStringLiteralForCartRings(ring){
+    console.log(ring)
     return `
-        <div class = "ring-container">
+        <div class = "ring-card-div">
             <img 
                 src = "../images/${ring.imgSrc}"
                 alt = "${ring.imgAlt}"
-            />
+            >
 
             <p> ${makeColorString(ring)} </p> 
             <p> Price: $${ring.price}  </p> 
@@ -68,7 +71,7 @@ export function getTopThreeRings(ringList){
                 }
             }
 
-            if(ring.quantitySold > topThreeRings[minIndex]) {
+            if(ring.quantitySold > topThreeRings[minIndex].quantitySold) {
                 topThreeRings[minIndex] = ring;
             }
         }
@@ -121,26 +124,29 @@ function headerContent(pageName) {
     let homeRef = "";
     let cartRef = "";
     let ringsRef = "";
+    let reviewRef = "";
     if(pageName == "home"){
         iconImgSrc = "./images/shopping-cart.png";
         logoImgSrc = "./images/logo.jpeg";
         homeRef = "./index.html";
-        cartRef = "./cart/index.html"
-        ringsRef = "./rings/index.html"
+        cartRef = "./cart/index.html";
+        ringsRef = "./rings/index.html";
+        reviewRef = "./review/index.html";
     } else {
         iconImgSrc = "../images/shopping-cart.png";
         logoImgSrc = "../images/logo.jpeg";
         homeRef = "../index.html";
-        cartRef = "../cart/index.html"
-        ringsRef = "../rings/index.html"
+        cartRef = "../cart/index.html";
+        ringsRef = "../rings/index.html";
+        reviewRef = "../review/index.html";
     }
     return `
     <div class = "header-container"> 
-        <a href= "${homeRef}"><img src = ${logoImgSrc} alt = "comapny logo"></img>
+        <a href= "${homeRef}"><img class= "logo-img" src = ${logoImgSrc} alt = "comapny logo">
         <a href= "${ringsRef}" ><p>Our Rings</p></a>
-        <a href= "#" ><p>Contact Us</p></a>
+        <a href= "${reviewRef}"><p>Contact Us</p></a>
     </div>
-    <a href= "${cartRef}"><img src = ${iconImgSrc} alt = "cart icon"></img></a>
+    <a href= "${cartRef}"><img class= "icon-img" src = ${iconImgSrc} alt = "cart icon"></a>
     `
 }
 
@@ -153,6 +159,7 @@ function footerContent() {
     </div>
 
     <div class = "copyright">
+        <p> &copy; 2024 Isaac Huffman, Idaho
     </div>
     `
 }
@@ -172,4 +179,8 @@ export function addRingToCart(ring) {
 
 export async function findRingById(id, rings) {
     return rings.find((item) => item.id === id);
+}
+
+export function clearCart() {
+    setLocalStorage("ring-cart", []);
 }

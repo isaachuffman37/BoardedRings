@@ -1,8 +1,10 @@
 import { UserCart } from "./UserCart.mjs";
-import { renderHeaderAndFooter } from "./utils.js";
+import { renderHeaderAndFooter, clearCart } from "./utils.js";
 
 renderHeaderAndFooter();
-let cartRingsElement = document.querySelector(".cart-items");
+const cartRingsElement = document.querySelector(".cart-items");
+const clearCartButton = document.querySelector(".clear-button");
+clearCartButton.addEventListener("click", clearCart)
 
 // console.log("hello")
 let userCart = new UserCart("ring-cart", cartRingsElement)

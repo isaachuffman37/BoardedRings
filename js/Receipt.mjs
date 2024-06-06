@@ -2,9 +2,9 @@ import { makeColorString, getLocalStorage } from "./utils.js";
 
 function createReceiptTemplate(ringList) {
 return `
-    <h2 class = "receipt-title">Receipt Title</h2>
+    <h2 class = "receipt-title">Receipt</h2>
     ${renderRingListReceiptHTML(ringList)}
-    <h3 class = "total-title"> Total Price: ${calculateTotalPrice(ringList)}</h3>
+    <h3 class = "total-title"> Total Price: $${calculateTotalPrice(ringList)}</h3>
 `
 }
 
@@ -13,7 +13,7 @@ function renderRingListReceiptHTML(ringList) {
     let ringHtml = ``;
     for(let ring of ringList) {
         ringHtml += `
-        <div class = "ringReceiptContainer">
+        <div class = "ring-receipt-container">
             <p>${makeColorString(ring)}</p>
             <p>$${ring.price}</p>
         </div>
