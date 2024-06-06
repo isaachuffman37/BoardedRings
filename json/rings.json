@@ -6,7 +6,7 @@
             "imgSrc": "ring.jpg",
             "imgAlt": "ring",
             "quantitySold": 30,
-            "description" : "I need to come up with stuff",
+            "description" : "Natural wood ring with subtle grain texture",
             "sizes": ["7", "8", "9", "10", "11", "12"],
             "width": "6mm",
             "price" : 23.99
@@ -17,7 +17,7 @@
             "imgSrc": "ring.jpg",
             "imgAlt": "ring",
             "quantitySold": 5,
-            "description" : "",
+            "description" : "Hand-carved oak ring with rustic charm",
             "sizes": ["6", "7", "8", "9", "10"],
             "width": "5mm",
             "price" : 19.99
@@ -28,7 +28,7 @@
             "imgSrc": "ring.jpg",
             "imgAlt": "ring",
             "quantitySold": 10,
-            "description" : "",
+            "description" : "Maple wood ring with smooth, polished finish",
             "sizes": ["8", "9", "10", "11"],
             "width": "7mm",
             "price" : 25.99
@@ -39,7 +39,7 @@
             "imgSrc": "ring.jpg",
             "imgAlt": "ring",
             "quantitySold": 15,
-            "description" : "",
+            "description" : "Eco-friendly bamboo ring with organic feel",
             "sizes": ["5", "6", "7", "8"],
             "width": "4mm",
             "price" : 30.99
@@ -50,7 +50,7 @@
             "imgSrc": "ring.jpg",
             "imgAlt": "ring",
             "quantitySold": 8,
-            "description" : "",
+            "description" : "Walnut wood ring showcasing rich, dark hues",
             "sizes": ["6", "7", "8", "9", "10", "11"],
             "width": "5mm",
             "price" : 22.99
@@ -61,7 +61,7 @@
             "imgSrc": "ring.jpg",
             "imgAlt": "ring",
             "quantitySold": 3,
-            "description" : "",
+            "description" : "Cedar ring with earthy scent and warm tones",
             "sizes": ["7", "8", "9"],
             "width": "6mm",
             "price" : 27.99
@@ -72,7 +72,7 @@
             "imgSrc": "ring.jpg",
             "imgAlt": "ring",
             "quantitySold": 12,
-            "description" : "",
+            "description" : "Cherry wood ring featuring elegant simplicity",
             "sizes": ["8", "9", "10", "11", "12"],
             "width": "8mm",
             "price" : 29.99
@@ -83,7 +83,7 @@
             "imgSrc": "ring.jpg",
             "imgAlt": "ring",
             "quantitySold": 7,
-            "description" : "",
+            "description" : "Birch wood ring with light, airy appearance",
             "sizes": ["6", "7", "8"],
             "width": "6mm",
             "price" : 21.99
@@ -94,7 +94,7 @@
             "imgSrc": "ring.jpg",
             "imgAlt": "ring",
             "quantitySold": 20,
-            "description" : "",
+            "description" : "Mahogany ring displaying deep, luxurious color",
             "sizes": ["9", "10", "11", "12"],
             "width": "7mm",
             "price" : 31.99
@@ -105,7 +105,7 @@
             "imgSrc": "ring.jpg",
             "imgAlt": "ring",
             "quantitySold": 6,
-            "description" : "",
+            "description" : "Pine wood ring evoking a forest's serenity",
             "sizes": ["5", "6", "7"],
             "width": "5mm",
             "price" : 24.99
@@ -116,7 +116,7 @@
             "imgSrc": "ring.jpg",
             "imgAlt": "ring",
             "quantitySold": 9,
-            "description" : "",
+            "description" : "Sandalwood ring with aromatic fragrance and durability",
             "sizes": ["8", "9", "10", "11"],
             "width": "4mm",
             "price" : 28.99
@@ -127,7 +127,7 @@
             "imgSrc": "ring.jpg",
             "imgAlt": "ring",
             "quantitySold": 2,
-            "description" : "",
+            "description" : "Rosewood ring with distinct grain patterns",
             "sizes": ["7", "8", "9", "10"],
             "width": "6mm",
             "price" : 20.99
@@ -138,7 +138,7 @@
             "imgSrc": "ring.jpg",
             "imgAlt": "ring",
             "quantitySold": 11,
-            "description" : "",
+            "description" : "Ash wood ring highlighting natural beauty and strength",
             "sizes": ["6", "7", "8", "9", "10", "11"],
             "width": "7mm",
             "price" : 26.99
@@ -149,7 +149,7 @@
             "imgSrc": "ring.jpg",
             "imgAlt": "ring",
             "quantitySold": 4,
-            "description" : "",
+            "description" : "Teak wood ring crafted for timeless elegance",
             "sizes": ["5", "6", "7", "8", "9"],
             "width": "5mm",
             "price" : 22.99
